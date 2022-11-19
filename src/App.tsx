@@ -7,13 +7,15 @@ const Homepage = lazy(() => import('./pages/homepage'));
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-        </Routes>
-      </Suspense>
-    </ErrorBoundary>
+    <div className="text-sm">
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
+    </div>
   );
 }
 
